@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: MyString
+  womans_fashion: false
+  mens_fashion: false
+  children_fashion: false
+
+two:
+  email: MyString
+  womans_fashion: false
+  mens_fashion: false
+  children_fashion: false

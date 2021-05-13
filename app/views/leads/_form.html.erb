@@ -1,0 +1,37 @@
+<%= form_with(model: lead) do |form| %>
+  <% if lead.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= t('landing.error') %></h2>
+
+      <ul>
+        <% lead.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :womans_fashion %>
+    <%= form.check_box :womans_fashion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mens_fashion %>
+    <%= form.check_box :mens_fashion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :children_fashion %>
+    <%= form.check_box :children_fashion %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

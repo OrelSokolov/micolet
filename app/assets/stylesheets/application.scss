@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+
+
+.leads {
+    width: 100%;
+    .content {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    #lead_email {
+      border: solid thin gray;
+      border-radius: 2px;
+
+      &:focus {
+        border-color: green;
+        outline: none;
+
+      }
+    }
+}
+
