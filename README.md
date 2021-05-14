@@ -4,6 +4,7 @@ To run project just clone and run:
 
 ``` 
 bundle 
+yarn install
 rails s
 ```
 
