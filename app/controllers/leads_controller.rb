@@ -18,6 +18,10 @@ class LeadsController < ApplicationController
 
     respond_to do |format|
       if @lead.save
+        # JUST TO SEE EMAIL
+        LeadMailer.with(lead: @lead).confirmation_email.deliver_now
+        # True way
+        EmailSendJob.perform_later @lead
         format.html { render :message, notice: "Lead was successfully created." }
       else
         format.html { render :new, status: :unprocessable_entity }

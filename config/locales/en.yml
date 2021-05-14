@@ -19,3 +19,4 @@ en:
   message:
     title: Thank you
     text: We sent email with confirmation to given email
+    confirmation_message: You are added to our leads list. Thank you
