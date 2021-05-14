@@ -1,11 +1,13 @@
 <div class="leads">
   <div class="content">
-    <div class="image-wrapper">
+    <div class="logo-wrapper">
       <%= image_tag('logo.png') %>
     </div>
     <p class="title"> <%= t('landing.title') %> </p>
     <p class="caption"> <%= t('landing.caption') %> </p>
 
-    <%= render 'form', lead: @lead %>
+    <div class="form-wrapper">
+      <%= render 'form', lead: @lead %>
+    </div>
   </div>
 </div>

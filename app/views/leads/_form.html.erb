@@ -1,7 +1,7 @@
 <%= form_with(model: lead) do |form| %>
   <% if lead.errors.any? %>
     <div id="error_explanation">
-      <h2><%= t('landing.error') %></h2>
+      <b><%= t('landing.error') %></b>
 
       <ul>
         <% lead.errors.each do |error| %>
@@ -12,26 +12,33 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :email %>
+    <%= form.label :email, for: :email %>
     <%= form.text_field :email %>
   </div>
 
-  <div class="field">
-    <%= form.label :womans_fashion %>
-    <%= form.check_box :womans_fashion %>
+  <div class="prefs-title">
+    <%= t('lead.preferences') %>
   </div>
 
-  <div class="field">
-    <%= form.label :mens_fashion %>
-    <%= form.check_box :mens_fashion %>
+  <div class="wrapper">
+    <div class="checkbox-container">
+      <%= form.check_box :womans_fashion, class: 'checkbox' %>
+      <%= form.label :womans_fashion, class: 'checkmark' %>
+    </div>
+
+    <div class="checkbox-container">
+      <%= form.check_box :mens_fashion %>
+      <%= form.label :mens_fashion %>
+    </div>
+
+    <div class="checkbox-container">
+      <%= form.check_box :children_fashion %>
+      <%= form.label :children_fashion %>
+    </div>
+
   </div>
 
-  <div class="field">
-    <%= form.label :children_fashion %>
-    <%= form.check_box :children_fashion %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
+  <div class="submit-wrapper">
+    <%= form.submit t("lead.subscribe") %>
   </div>
 <% end %>

@@ -2,11 +2,12 @@ en:
   lead:
     errors:
       email: "does not look like email"
-      prefs:
-        woman: Womans fashion
-        man: Mens fashion
-        child: Children fashion
-      preferences: Preferences
+    prefs:
+      woman: Womans fashion
+      man: Mens fashion
+      child: Children fashion
+    preferences: Preferences
+    subscribe: Subscribe me!
 
   landing:
     title: Welcome! Soon we will launch our site in this country
