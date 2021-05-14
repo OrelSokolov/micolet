@@ -13,3 +13,7 @@ en:
     title: Welcome! Soon we will launch our site in this country
     caption: Subscribe to receive our newsletter
     error: Something is wrong
+
+  message:
+    title: Thank you
+    text: We sent email with confirmation to given email
