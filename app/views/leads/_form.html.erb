@@ -13,6 +13,9 @@
 
   <div class="field">
     <%= form.label :email, for: :email %>
+    <div class="score_error">
+      <%= t('lead.errors.email_score') %>
+    </div>
     <%= form.text_field :email %>
   </div>
 
@@ -39,6 +42,6 @@
   </div>
 
   <div class="submit-wrapper">
-    <%= form.submit t("lead.subscribe") %>
+    <%= form.submit t("lead.subscribe"), id: "subs" %>
   </div>
 <% end %>

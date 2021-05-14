@@ -2,6 +2,7 @@ en:
   lead:
     errors:
       email: "does not look like email"
+      email_score: "score is lower than required"
     prefs:
       woman: Womans fashion
       man: Mens fashion

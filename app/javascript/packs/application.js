@@ -12,6 +12,8 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
+require("jquery")
+
 
 function httpGetAsync(url, callback) {
     var xmlHttp = new XMLHttpRequest();
@@ -23,6 +25,25 @@ function httpGetAsync(url, callback) {
     xmlHttp.send(null);
 }
 
-var url = `https://emailvalidation.abstractapi.com/v1/?api_key=7b1f15f027244fa8bfb5e5c463f1135b&email=${email}`
+function processResponse(response){
+    console.log(response);
+    let qs = parseFloat(JSON.parse(response).quality_score)
+    console.log(qs)
+    if( qs >= 0.7) {
+        $('#subs').attr('disabled', false);
+        $('.score_error').hide();
+    }
+    else {
+        $('.score_error').show();
+        $('#subs').attr('disabled', true);
+    }
+}
 
-httpGetAsync(url)
+$(document).ready(function(){
+    $('#lead_email').on('change', function(){
+        $('.score-error').hide();
+        let email = $(this).val();
+        let url = "https://emailvalidation.abstractapi.com/v1/?api_key=7b1f15f027244fa8bfb5e5c463f1135b&email="+email
+        httpGetAsync(url, processResponse)
+    })
+});
