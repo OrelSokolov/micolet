@@ -102,6 +102,10 @@ body {
       border-radius: 4px;
       padding: 5px 10px;
       cursor: pointer;
+
+      &:hover {
+        background: darken($theme-green, 10%);
+      }
     }
 
     input[type=checkbox] {
