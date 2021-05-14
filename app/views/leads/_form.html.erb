@@ -24,6 +24,10 @@
   </div>
 
   <div class="wrapper">
+    <div class="prefs_error">
+      <%= t('lead.errors.prefs_required') %>
+    </div>
+
     <div class="checkbox-container">
       <%= form.check_box :womans_fashion, class: 'checkbox' %>
       <%= form.label :womans_fashion, class: 'checkmark' %>

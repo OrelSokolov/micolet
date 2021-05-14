@@ -3,8 +3,9 @@ en:
     errors:
       email: "does not look like email"
       email_score: "score is lower than required"
+      preferences_required: "are required to be selected"
     prefs:
-      woman: Womans fashion
+      woman: Womens fashion
       man: Mens fashion
       child: Children fashion
     preferences: Preferences
